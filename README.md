@@ -50,8 +50,8 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | 198.84.175.6         |
-| Web-1/2  | No                  | 13.90.99.145         |
-| Elk-VM   | Yes                 | 198.84.175.6         |
+| Web-1/2  | No                  | 10.0.0.4 10.1.0.4    |
+| Elk-VM   | Yes                 | 13.90.99.145 10.0.0.4 198.84.175.5|
 
 ### Elk Configuration
 
