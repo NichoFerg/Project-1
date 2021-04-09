@@ -103,3 +103,5 @@ Run the metricbeat and filebeat playbooks to get both services running on your E
 - ansible-playbook metricbeat-playbook.yml && ansible-playbook filebeat-playbook.yml
 
 If configured correctly navigating to your Elk-VMs public IP address on port 5601 should produce this screen:
+
+![https://github.com/NichoFerg/Project-1/blob/main/Images/Kibana-screen.PNG](Images/Kibana-screen.PNG)
