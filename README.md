@@ -55,7 +55,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it ensures that no part of the configuration was missed. Taking the time that the ensure that the playbook is perfect will help to automate running this playbook on multiple machines, if desired, efficent and errorlessly.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it ensures that no part of the configuration was missed. Taking the time to ensure that the playbook is perfect will help to automate running this playbook on multiple machines, if desired, efficent and errorlessly.
 
 The playbook implements the following tasks:
 - Installs Docker and Python3-pip to be used as the default docker module
@@ -76,7 +76,7 @@ We have installed the following Beats on these machines:
 - Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- Filebeat collects the logs for each virtual machine, you should be able to see information like how many visitors you've had and where they are located. Along with seeing if any users experienced any errors like 404 or 503 and when they happend.
+- Filebeat collects the logs for each virtual machine, you should be able to see information like how many visitors you've had and where they are located. Along with seeing if any users experienced any errors like 404 or 503 and when they happened.
 - Metricbeat provides metric logs for each virtual machine, you will be able to see information like CPU Usage and Memory Usage.
 
 ### Using the Playbook
