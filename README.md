@@ -33,7 +33,7 @@ The configuration details of each machine may be found below.
 | Jump Box | Gateway  | 10.0.0.4   | Linux Ubuntu 18.04|
 | Web-1    | Dvwa     | 10.0.0.5   | Linux Ubuntu 18.04|
 | Web-2    | Dvwa     | 10.0.0.6   | Linux Ubuntu 18.04|
-| ELK-VM   | Elk      | 10.1.0.4   | Linux Ubuntu 18.04|
+| ELK-VM   | Kibana   | 10.1.0.4   | Linux Ubuntu 18.04|
 
 ### Access Policies
 
@@ -87,4 +87,19 @@ SSH into the control node and follow the steps below:
 - Update the hosts file to include your private IP addresses for the machines you want for each service. DVWA machines are under webservers while the Elk stack is under Elk. In turn you can then update each playbook file with the host to tell ansible which machines to run the playbook on.
 - Run the playbooks, and navigate to the Public IP address of the Elk-VM on port 5601 to check that the installation worked as expected.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+### How to use Ansible Build
+Use the nano command to update your configuration files to you specifications
+- nano ansible.cfg
+- nano metricbeat-config.yml
+- nano filebeat-config.yml
+
+Use the nano command to update your hosts file to your private IP address of your machines
+- nano hosts
+
+Run the pentest playbook to get your docker containers running for web 1/2 VMs
+- ansible-playbook pentest.yml
+
+Run the metricbeat and filebeat playbooks to get both services running on your Elk-VM
+- ansible-playbook metricbeat-playbook.yml && ansible-playbook filebeat-playbook.yml
+
+If configured correctly navigating to your Elk-VMs public IP address on port 5601 should produce this screen:
